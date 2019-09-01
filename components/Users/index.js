@@ -1,7 +1,7 @@
 import React from 'react'
 
 import UserCard from '../UserCard'
-import style from './style.module.css'
+import './style.css'
 
 function Users(props) {
   const { users, isLoading } = props
@@ -11,7 +11,7 @@ function Users(props) {
   }
 
   return (
-    <div className={style.wrapper}>
+    <div className="users">
       {users.map(user => (
         <UserCard key={user.id} {...user} />
       ))}
