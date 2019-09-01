@@ -8,7 +8,7 @@ function UserCard(props) {
   
   return (
     <div className={style.wrapper}>
-      <div className={style.name}{name}
+      <div className={style.name}>{name}</div>
       <img src={photo} />{email} {phone} {city}, {state}
     </div>
   );
