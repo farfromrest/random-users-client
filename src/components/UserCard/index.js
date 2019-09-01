@@ -11,7 +11,7 @@ function UserCard(props) {
         <button className="user-card__edit-button">Edit User</button>
         <div className="user-card__name">{name}</div>
         <div className="user-card__photo">
-          <img src={photo} alt={`Photo of ${name}`} />
+          <img src={photo} alt={name} />
         </div>
       </header>
       <div className="user-card__email">{email}</div>
