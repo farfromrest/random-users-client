@@ -1,26 +1,47 @@
 import React from 'react'
 
+import { SORT_BY } from '../../constants'
 import useRandomUsers from '../../hooks/useRandomUsers'
 import Users from '../../components/Users'
 
-function usersSelector({ users, searchText }) {
+function usersSelector({ users, searchText, sortBy }) {
   const lowerCaseSearchText = searchText.toLowerCase()
 
-  if (searchText !== '') {
-    return users.filter(user => {
-      return user.name.toLowerCase().indexOf(lowerCaseSearchText) > -1
-    })
+  let updatedUsers = [...users]
+
+  if (lowerCaseSearchText !== '') {
+    updatedUsers = updatedUsers.filter(user =>
+      user.name.toLowerCase().includes(lowerCaseSearchText)
+    )
   }
 
-  return users
+  switch (sortBy) {
+    case SORT_BY.NAME:
+      updatedUsers.sort((a, b) => {
+        return a.name.localeCompare(b.name)
+      })
+      break
+    case SORT_BY.NAME_REVERSE:
+      updatedUsers.sort((a, b) => {
+        return b.name.localeCompare(a.name)
+      })
+      break
+    default:
+      break
+  }
+
+  return updatedUsers
 }
 
 function UsersContainer(props) {
-  const { searchText } = props
+  const { searchText, sortBy } = props
   const { isLoading, users } = useRandomUsers()
 
   return (
-    <Users users={usersSelector({ users, searchText })} isLoading={isLoading} />
+    <Users
+      users={usersSelector({ users, searchText, sortBy })}
+      isLoading={isLoading}
+    />
   )
 }
 
