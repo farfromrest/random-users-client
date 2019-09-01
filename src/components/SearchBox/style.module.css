@@ -1,13 +1,9 @@
-.wrapper {
+.input {
   border-radius: 5px;
-  overflow: hidden;
-  padding-bottom: 40px;
-  text-align: center;
-  margin: 20px;
-  flex: 0 0 280px;
+  border: 0;
   box-shadow: 0 0 17px 1px rgba(0, 0, 0, 0.15);
 }
-
+/* 
 .header {
   background-color: rgb(58, 84, 243);
   height: 100px;
@@ -53,4 +49,4 @@
 .email,
 .phone {
   margin-bottom: 15px;
-}
+} */

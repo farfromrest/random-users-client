@@ -1,7 +1,7 @@
 import React from 'react'
 
 import UserCard from '../UserCard'
-import './style.css'
+import style from './style.module.css'
 
 function Users(props) {
   const { users, isLoading } = props
@@ -10,8 +10,12 @@ function Users(props) {
     return `Fetching users...`
   }
 
+  if (!users.length) {
+    return 'No users found.'
+  }
+
   return (
-    <div className="users">
+    <div className={style.wrapper}>
       {users.map(user => (
         <UserCard key={user.id} {...user} />
       ))}

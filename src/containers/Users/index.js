@@ -1,12 +1,27 @@
-import React from 'react';
+import React from 'react'
 
-import useRandomUsers from '../../hooks/useRandomUsers';
-import Users from '../../components/Users';
+import useRandomUsers from '../../hooks/useRandomUsers'
+import Users from '../../components/Users'
 
-function UsersContainer(props) {
-  const { isLoading, users } = useRandomUsers();
+function usersSelector({ users, searchText }) {
+  const lowerCaseSearchText = searchText.toLowerCase()
 
-  return <Users users={users} isLoading={isLoading} />;
+  if (searchText !== '') {
+    return users.filter(user => {
+      return user.name.toLowerCase().indexOf(lowerCaseSearchText) > -1
+    })
+  }
+
+  return users
 }
 
-export default UsersContainer;
+function UsersContainer(props) {
+  const { searchText } = props
+  const { isLoading, users } = useRandomUsers()
+
+  return (
+    <Users users={usersSelector({ users, searchText })} isLoading={isLoading} />
+  )
+}
+
+export default UsersContainer
