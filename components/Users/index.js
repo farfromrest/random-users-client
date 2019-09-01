@@ -1,13 +1,22 @@
-import React from 'react';
+import React from 'react'
 
-import UserCard from '../UserCard/index.js'
+import UserCard from '../UserCard'
+import style from './style.module.css'
 
 function Users(props) {
-  const { users, isLoading } = props;
+  const { users, isLoading } = props
 
-  return <div>{users.map(user => (
-    <UserCard key={user.id} {...user} />
-  ))}</div>;
+  if (isLoading) {
+    return `Fetching users...`
+  }
+
+  return (
+    <div className={style.wrapper}>
+      {users.map(user => (
+        <UserCard key={user.id} {...user} />
+      ))}
+    </div>
+  )
 }
 
-export default Users;
+export default Users

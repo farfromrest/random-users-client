@@ -1,17 +1,24 @@
-import React from 'react';
+import React from 'react'
 
-import style from './style.module.scss';
+import style from './style.module.css'
 
-console.log(style)
 function UserCard(props) {
   const { name, photo, email, phone, city, state } = props
-  
+
   return (
     <div className={style.wrapper}>
+      <button className={style.editButton}>Edit User</button>
       <div className={style.name}>{name}</div>
-      <img src={photo} />{email} {phone} {city}, {state}
+      <div className={style.photo}>
+        <img src={photo} alt={`Photo of ${name}`} />
+      </div>
+      <div className={style.email}>{email}</div>
+      <div className={style.email}>{phone}</div>
+      <div className={style.email}>
+        {city}, {state}
+      </div>
     </div>
-  );
+  )
 }
 
-export default UserCard;
+export default UserCard
