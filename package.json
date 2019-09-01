@@ -13,6 +13,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "@testing-library/react": "^9.1.3",
     "react-scripts": "latest"
   },
   "browserslist": {
