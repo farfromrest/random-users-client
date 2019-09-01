@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
-import style from './style.module.css'
+import style from "./style.module.css";
 
 function UserCard(props) {
-  const { name, photo, email, phone, city, state } = props
+  const { name, photo, email, phone, city, state } = props;
 
   return (
     <div className={style.wrapper}>
-      <header className="user-card__header">
+      <header className={style.header}>
         <button className="user-card__edit-button">Edit User</button>
         <div className="user-card__name">{name}</div>
         <div className="user-card__photo">
@@ -20,7 +20,7 @@ function UserCard(props) {
         {city}, {state}
       </div>
     </div>
-  )
+  );
 }
 
-export default UserCard
+export default UserCard;
