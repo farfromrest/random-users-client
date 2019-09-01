@@ -34,10 +34,29 @@
   cursor: pointer;
 }
 
+.wrapper[data-is-editing='true'] .editButton {
+  background-image: url('./images/close.svg');
+}
+
 .name {
-  flex: 1 0 100%;
+  flex: 0 0 70%;
   font-size: 1.5em;
   text-transform: capitalize;
+  line-height: 1.2;
+}
+
+.nameInput {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.25);
+  text-align: center;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  color: inherit;
+  padding: 0;
+  outline: none;
+  line-height: inherit;
 }
 
 .photo {
