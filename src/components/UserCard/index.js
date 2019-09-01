@@ -1,12 +1,12 @@
 import React from 'react'
 
-import './style.css'
+import style from './style.module.css'
 
 function UserCard(props) {
   const { name, photo, email, phone, city, state } = props
 
   return (
-    <div className="user-card">
+    <div className={style.wrapper}>
       <header className="user-card__header">
         <button className="user-card__edit-button">Edit User</button>
         <div className="user-card__name">{name}</div>

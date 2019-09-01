@@ -1,4 +1,4 @@
-.user-card {
+.wrapper {
   border-radius: 5px;
   overflow: hidden;
   padding-bottom: 40px;
@@ -8,7 +8,7 @@
   box-shadow: 0 0 17px 1px rgba(0, 0, 0, 0.15);
 }
 
-.user-card__header {
+.header {
   background-color: rgb(58, 84, 243);
   height: 100px;
   display: flex;
@@ -21,7 +21,7 @@
   position: relative;
 }
 
-.user-card__edit-button {
+.edit-button {
   background: url('./images/user-edit.svg') no-repeat center;
   background-size: 30px auto;
   width: 30px;
@@ -33,13 +33,13 @@
   left: 0;
 }
 
-.user-card__name {
+.name {
   flex: 1 0 100%;
   font-size: 1.5em;
   text-transform: capitalize;
 }
 
-.user-card__photo {
+.photo {
   border-radius: 100%;
   width: 130px;
   height: 130px;
@@ -48,8 +48,8 @@
   box-shadow: 0 0 17px 1px rgba(0, 0, 0, 0.15);
 }
 
-.user-card__name,
-.user-card__email,
-.user-card__phone {
+.name,
+.email,
+.phone {
   margin-bottom: 15px;
 }
