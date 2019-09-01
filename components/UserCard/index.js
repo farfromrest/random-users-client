@@ -8,15 +8,15 @@ function UserCard(props) {
   return (
     <div className="user-card">
       <header className="user-card__header">
-        <button className="user-card__editButton">Edit User</button>
+        <button className="user-card__edit-button">Edit User</button>
         <div className="user-card__name">{name}</div>
         <div className="user-card__photo">
           <img src={photo} alt={`Photo of ${name}`} />
         </div>
       </header>
       <div className="user-card__email">{email}</div>
-      <div className="user-card__email">{phone}</div>
-      <div className="user-card__email">
+      <div className="user-card__phone">{phone}</div>
+      <div className="user-card__location">
         {city}, {state}
       </div>
     </div>
