@@ -1,52 +1,19 @@
 .input {
   border-radius: 5px;
   border: 0;
-  box-shadow: 0 0 17px 1px rgba(0, 0, 0, 0.15);
-}
-/* 
-.header {
-  background-color: rgb(58, 84, 243);
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  color: #fff;
-  font-family: Helvetica, sans-serif;
-  padding-top: 20px;
-  margin-bottom: 100px;
-  position: relative;
-}
-
-.editButton {
-  background: url('./images/user-edit.svg') no-repeat center;
-  background-size: 23px auto;
-  width: 40px;
-  height: 40px;
-  text-indent: -999999px;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-}
-
-.name {
-  flex: 1 0 100%;
+  box-shadow: 0 0 17px 1px rgba(var(--color-black), 0.15);
   font-size: 1.5em;
-  text-transform: capitalize;
+  padding: 5px;
+  background: url('./images/search-solid.svg') no-repeat 5px 50%;
+  background-size: 20px;
+  text-indent: 30px;
+  border: 1px solid transparent;
 }
 
-.photo {
-  border-radius: 100%;
-  width: 130px;
-  height: 130px;
-  border: 5px solid #fff;
-  overflow: hidden;
-  box-shadow: 0 0 17px 1px rgba(0, 0, 0, 0.15);
+.input::placeholder {
+  color: rgba(var(--color-black), 0.15);
 }
 
-.name,
-.email,
-.phone {
-  margin-bottom: 15px;
-} */
+.input:focus {
+  border-color: rgba(var(--color-blue), 0.25);
+}

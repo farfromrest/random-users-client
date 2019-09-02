@@ -1,3 +1,10 @@
 .button {
-  color: blue;
+  color: rgb(var(--color-blue));
+  cursor: pointer;
+  text-transform: uppercase;
+  line-height: 2;
+}
+
+.button:focus {
+  outline: 1px solid rgba(var(--color-blue), 0.25);
 }

@@ -7,6 +7,7 @@ import SortBox from './components/SortBox'
 import Users from './containers/Users'
 import './reset.css'
 import './base.css'
+import style from './style.module.css'
 
 function App() {
   const [sortBy, setSortBy] = useState(SORT_BY.UNSORTED)
@@ -30,11 +31,17 @@ function App() {
   }
 
   return (
-    <>
-      <SearchBox value={searchText} onChange={handleChangeSearchText} />
-      <SortBox sortBy={sortBy} onClick={handleChangeSortBy} />
+    <div className={style.wrapper}>
+      <header className={style.header}>
+        <SearchBox
+          value={searchText}
+          onChange={handleChangeSearchText}
+          className={style.searchBox}
+        />
+        <SortBox sortBy={sortBy} onClick={handleChangeSortBy} />
+      </header>
       <Users searchText={searchText} sortBy={sortBy} />
-    </>
+    </div>
   )
 }
 

@@ -1,7 +1,14 @@
+:root {
+  --color-blue: 58, 84, 243;
+  --color-gray: 109, 109, 109;
+  --color-white: 255, 255, 255;
+  --color-black: 0, 0, 0;
+}
+
 html,
 body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: rgb(109, 109, 109);
-  background-color: rgb(255, 255, 255);
+  font-family: Helvetica, sans-serif;
+  color: rgb(var(--color-gray));
+  background-color: rgb(var(--color-white));
   font-size: 13px;
 }

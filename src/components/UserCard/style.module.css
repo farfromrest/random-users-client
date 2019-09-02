@@ -1,37 +1,40 @@
 .wrapper {
   border-radius: 5px;
   overflow: hidden;
-  padding-bottom: 40px;
+  padding-bottom: 25px;
   text-align: center;
-  margin: 20px;
-  flex: 0 0 280px;
   box-shadow: 0 0 17px 1px rgba(0, 0, 0, 0.15);
 }
 
 .header {
-  background-color: rgb(58, 84, 243);
+  background-color: rgb(var(--color-blue));
   height: 100px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   color: #fff;
-  font-family: Helvetica, sans-serif;
   padding-top: 20px;
   margin-bottom: 100px;
   position: relative;
 }
 
 .editButton {
-  background: url('./images/user-edit.svg') no-repeat center;
-  background-size: 23px auto;
-  width: 40px;
-  height: 40px;
+  background: url('./images/user-edit.svg') no-repeat center center;
+  background-size: 20px auto;
+  width: 30px;
+  height: 30px;
   text-indent: -999999px;
   overflow: hidden;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 5px;
+  left: 5px;
   cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.editButton:focus {
+  border-color: rgba(var(--color-white), 0.25);
 }
 
 .wrapper[data-is-editing='true'] .editButton {
@@ -39,10 +42,11 @@
 }
 
 .name {
-  flex: 0 0 70%;
+  flex: 0 0 calc(100% - 60px);
   font-size: 1.5em;
   text-transform: capitalize;
   line-height: 1.2;
+  margin-bottom: 15px;
 }
 
 .nameInput {
@@ -68,8 +72,9 @@
   box-shadow: 0 0 17px 1px rgba(0, 0, 0, 0.15);
 }
 
-.name,
 .email,
-.phone {
+.phone,
+.location {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   margin-bottom: 15px;
 }

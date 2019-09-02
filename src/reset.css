@@ -131,6 +131,10 @@ table {
 input,
 button {
   border: 0;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  background: none;
 }
 
 *,
