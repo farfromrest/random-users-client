@@ -4,7 +4,7 @@
   box-shadow: 0 0 17px 1px rgba(var(--color-black), 0.15);
   font-size: 1.5em;
   padding: 5px;
-  background: url('./images/search-solid.svg') no-repeat 5px 50%;
+  background: url('/search-solid.svg') no-repeat 5px 50%;
   background-size: 20px;
   text-indent: 30px;
   border: 1px solid transparent;
