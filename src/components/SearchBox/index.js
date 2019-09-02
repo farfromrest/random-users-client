@@ -4,6 +4,7 @@ import style from './style.module.css'
 
 function SearchBox(props) {
   const { className, ...rest } = props
+
   return (
     <input
       type="search"
