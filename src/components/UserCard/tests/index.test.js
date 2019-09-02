@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, fireEvent, getByDisplayValue } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
 
 import UserCard from '../'
 
@@ -15,6 +15,7 @@ const renderComponent = (overrideProps = {}) =>
       {...overrideProps}
     />
   )
+
 describe('UserCard', () => {
   it('should render the user information', () => {
     const { getByText } = renderComponent()

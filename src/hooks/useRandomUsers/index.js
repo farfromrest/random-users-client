@@ -8,6 +8,7 @@ const API_URL = `https://randomuser.me/api/`
 
 function useRandomUsers(numberOfResults = 5) {
   const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState()
   const [usersState, dispatch] = useReducer(reducer, initialState)
 
   useEffect(() => {
@@ -18,6 +19,10 @@ function useRandomUsers(numberOfResults = 5) {
           type: FETCHED_USERS,
           payload: json.results.map(parseUser)
         })
+        setIsLoading(false)
+      })
+      .catch(error => {
+        setError(error)
         setIsLoading(false)
       })
   }, [numberOfResults])
@@ -32,7 +37,8 @@ function useRandomUsers(numberOfResults = 5) {
   return {
     users: usersState.ids.map(id => usersState.entities[id]),
     isLoading,
-    onUpdateUser: handleUpdateUser
+    onUpdateUser: handleUpdateUser,
+    error
   }
 }
 

@@ -4,14 +4,22 @@ import UserCard from '../UserCard'
 import style from './style.module.css'
 
 function Users(props) {
-  const { users, isLoading, onUpdateUser } = props
+  const { users, isLoading, onUpdateUser, error } = props
 
   if (isLoading) {
-    return `Fetching users...`
+    return <div className={style.status}>Fetching users...</div>
+  }
+
+  if (error) {
+    return (
+      <div className={style.status}>
+        Sorry, something went wrong, try again.
+      </div>
+    )
   }
 
   if (!users.length) {
-    return 'Sorry, no users found.'
+    return <div className={style.status}>Sorry, no users found.</div>
   }
 
   return (

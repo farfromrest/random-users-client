@@ -5,3 +5,11 @@
   grid-auto-rows: auto;
   grid-gap: 20px;
 }
+
+.status {
+  font-size: 2em;
+  padding: 40px 0;
+  font-style: italic;
+  text-align: center;
+  color: rgba(var(--color-gray), 0.5);
+}

@@ -6,13 +6,14 @@ import usersSelector from './selector'
 
 function UsersContainer(props) {
   const { searchText, sortBy } = props
-  const { isLoading, users, onUpdateUser } = useRandomUsers()
+  const { isLoading, users, onUpdateUser, error } = useRandomUsers(50)
 
   return (
     <Users
       users={usersSelector({ users, searchText, sortBy })}
       isLoading={isLoading}
       onUpdateUser={onUpdateUser}
+      error={error}
     />
   )
 }

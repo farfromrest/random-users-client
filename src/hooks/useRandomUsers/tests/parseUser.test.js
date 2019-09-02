@@ -1,5 +1,6 @@
 import parseUser from '../parseUser'
 
+// Example response from randomuser.me api
 const rawUser = {
   gender: 'male',
   name: { title: 'mr', first: 'matthew', last: 'anderson' },
@@ -35,7 +36,7 @@ const rawUser = {
 }
 
 describe('parseUser', () => {
-  it('will parse the api response to a simplier object', () => {
+  it('should parse the api response to a simplier object', () => {
     expect(parseUser(rawUser)).toEqual({
       id: 'b0da19eb-aca7-4e8e-a307-5bfccb6f7532',
       name: 'matthew anderson',
